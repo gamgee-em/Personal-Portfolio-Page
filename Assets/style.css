@@ -12,6 +12,7 @@ body {
     height: 100vh;
 }
 
+/* fix fade in sidebar nav bug */
 #fadeIn {
     background-color: #000;
     display: none;
@@ -32,7 +33,6 @@ nav ul {
     align-items: center;
     font-family: 'Open Sans';
     letter-spacing: 0.5vw;
-
 }
 
 a {
@@ -41,17 +41,16 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    opacity: .5;
+}
+
 li:hover {
     cursor: pointer;
     color: black;
     opacity: .5;
 
 }
-
-a:hover {
-    opacity: .5;
-}
-
 
 main {
     display: flex;
@@ -65,42 +64,22 @@ main {
 
 /* use align self on children elements */
 .intro {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-family: 'Open Sans';
-        font-weight: 900;
-        font-size: 4vw;
-        height: 100vh;
-        width: 80vw;
-        opacity: 0.5;
-        background-color: #111;
-        backdrop-filter: blur(100px);
-        position: absolute;
-        padding-bottom: 15vh;
-}
-
-.port-image {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: flex-end;
-    height: auto;
-    width: 45vw;
-    height: auto;
-    position: relative;
+    font-family: 'Open Sans';
+    font-weight: 900;
+    font-size: 4vw;
+    height: 100vh;
+    width: 80vw;
+    opacity: 0.5;
+    background-color: #111;
+    backdrop-filter: blur(100px);
+    position: absolute;
+    padding-bottom: 15vh;
 }
 
-.port-image img {
-    height: auto;
-    width: 40vw;
-    border-radius: 5px;
-    padding: 0 1vw 10vh 0;
-}
-
-.port-image img:hover {
-    cursor: pointer;
-}
 
 h1 {
     opacity: 0.5;
@@ -134,14 +113,43 @@ button:active {
    background-color: gray;
 }
 
+.port-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: auto;
+    width: 45vw;
+    height: auto;
+    position: relative;
+    border-radius: 5px;
+
+}
+
+.port-image img {
+    height: auto;
+    width: 45vw;
+    padding: 0;
+}
+
+.port-image img:hover {
+    cursor: pointer;
+}
+
+img {
+    position: relative;
+    border-radius: 10px;
+    bottom: 10vh;
+}
+
 @media screen and (max-width: 550px) {
 
     .wrapper {
         display: flex;
         flex-direction: column;
         width: 100vw;
-        height: 100vh;
+        height: auto;
         align-self: center;
+        flex-wrap: wrap;
     }
 
     nav #fadeIn {
@@ -152,23 +160,32 @@ button:active {
     nav ul {
         padding: 0;
         width: 100vw;
+        height: 50vh;
+        position: relative;
     }
 
     main {
+        width: 100vw;
+        height: 50vh;
+    }
+
+    div .intro {
         display: flex;
+        flex-direction: column;
         width: 100vw;
+        height: 50vh;
+        padding: 0;
     }
 
-    .intro {
-        width: 100vw;
-    }
-
-    .port-image {
-        width: 100vw;
+   .port-image {
+        height: 30vh;
     }
 
     .port-image img {
-        width: 100vw;
+        width: 80vw;
+        height: 30vh;
+        padding: 0 0 1vh 0;
+        bottom: 1vh;
     }
 
 } 
