@@ -10,12 +10,12 @@
     <link href="./Assets/style.css" rel="stylesheet">
     <link href="./Assets/reset.css" rel="stylesheet">
 </head>
-<body>
-<!--     <img src='images/IMG_1486.jpg'>
- -->    
+<body>   
+    <!-- WRAPPER -->
+    <div class="flex-container">
+
         <!-- SIDE NAVAGATION -->
-    <div class="wrapper">
-        <nav id='fadeIn' class="slide">
+        <nav class="flex-item" id='fadeIn'>
             <ul>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
@@ -23,21 +23,24 @@
                 <li><a href="#">Resume</a></li>
             </ul>
         </nav>
-        <main>
-            <div class='intro'>
-                <h1>
-                        Sam Sweigart
-                </h1>
-                <button>Hire Me</button>
-<!--                 <img src="./images/project1-ss.png">
- -->
-            </div>
-            <div class="port-image">
-                <a href="https://samsweig.github.io/01hw-penn/" target='_blank'>
-                    <img src="./images/project1-ss.png">
-                </a>
-            </div>
-        </main>        
+
+        <!-- MAIN -->
+        <main class='flex-item'>
+            <!-- INTRO -->                
+            <h1>Sam Sweigart</h1>
+            
+            <button class="btn">Hire Me</button>
+            <!-- PORTFOLIO IMAGE -->
+            <a class='port-image' href="https://samsweig.github.io/01hw-penn/" target='_blank'>
+                <img src="./images/project1-ss.png">
+            </a>
+        
+            <h4 class="footer-flex-item">&copy; Sam Sweigart</h4>
+        </main>
+        
+        <!-- <footer class="footer-flex-item">
+            <h4>&copy;Sam Sweigart</h4>
+        </footer> -->
 
     </div>
     <script src='scripts/main.js'></script>
