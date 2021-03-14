@@ -1,0 +1,174 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+#fadeIn {
+    background-color: #000;
+    display: none;
+    font-size: 2vw;
+}
+
+nav {
+    background-color: lightgray;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 10vh 0 0 0;
+    width: 20vw;
+    height: 50vh;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Open Sans';
+    letter-spacing: 0.5vw;
+
+}
+
+a {
+    font-size: 5vw;
+    color: #fff;
+    text-decoration: none;
+}
+
+li:hover {
+    cursor: pointer;
+    color: black;
+    opacity: .5;
+
+}
+
+a:hover {
+    opacity: .5;
+}
+
+
+main {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    background: url(https://www.w3schools.com/howto/img_parallax.jpg) no-repeat center;
+    background-size: cover;
+    width: 80vw;
+}
+
+/* use align self on children elements */
+.intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Open Sans';
+        font-weight: 900;
+        font-size: 4vw;
+        height: 100vh;
+        width: 80vw;
+        opacity: 0.5;
+        background-color: #111;
+        backdrop-filter: blur(100px);
+        position: absolute;
+        padding-bottom: 15vh;
+}
+
+.port-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: auto;
+    width: 45vw;
+    height: auto;
+    position: relative;
+}
+
+.port-image img {
+    height: auto;
+    width: 40vw;
+    border-radius: 5px;
+    padding: 0 1vw 10vh 0;
+}
+
+.port-image img:hover {
+    cursor: pointer;
+}
+
+h1 {
+    opacity: 0.5;
+    color: #fff;
+    letter-spacing: 1vw;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    background: transparent;
+    color: #fff;
+    border: 1px white solid;
+    opacity: 0.8;
+    width: 17vw;
+    outline: none;
+    font-weight: 900;
+    letter-spacing: .2vw;
+    margin-top: 3vh;
+    padding: .5vw;
+}
+
+button:hover {
+    outline: lightgray;
+    cursor: pointer;
+    box-shadow: 0 0 20px white;
+    color: white;
+}
+
+button:active {
+   background-color: gray;
+}
+
+@media screen and (max-width: 550px) {
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        align-self: center;
+    }
+
+    nav #fadeIn {
+        font-size: 70%;
+        padding: 0;
+    }
+
+    nav ul {
+        padding: 0;
+        width: 100vw;
+    }
+
+    main {
+        display: flex;
+        width: 100vw;
+    }
+
+    .intro {
+        width: 100vw;
+    }
+
+    .port-image {
+        width: 100vw;
+    }
+
+    .port-image img {
+        width: 100vw;
+    }
+
+} 
