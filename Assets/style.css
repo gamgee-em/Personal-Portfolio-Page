@@ -52,7 +52,6 @@ li:hover {
 
 /* MAIN */
 main {
-    right: 0;
     display: flex;
     flex-flow: column nowrap;
     background: url(https://www.w3schools.com/howto/img_parallax.jpg) no-repeat center;
@@ -60,7 +59,12 @@ main {
     font-weight: 900;
     font-size: 4vw;    
     width: 80vw;
-    justify-content: center;
+    justify-content: flex-end;
+    padding: 0 0 10vh 0;
+ }
+
+ main .flex-item {
+     
  }
 
 .flex-item h1 {
@@ -81,7 +85,7 @@ main {
     align-self: center;
     outline: none;
     font-weight: 900;
-    border: 1px lightgray solid;
+    border: none;
     color: lightgray;
     margin: 2vh 10vh;
     letter-spacing: .2vw;
@@ -111,8 +115,6 @@ button:active {
 
 .port-image {
     align-self: center;
-    margin-bottom: -10vh;
-
 }
 
 .port-image img:hover {
@@ -123,7 +125,6 @@ button:active {
 main a img {
     border-radius: 5px;
     width: 35vw;
-    margin-bottom: -25vh;
 }
 
 main h4 {
@@ -144,8 +145,8 @@ main h4 {
 @media screen and (max-width: 500px) {
 
     .flex-container {
-        flex-flow: column wrap;
-
+        flex-flow: column nowrap;
+        justify-content: flex-end;
     }
 
     #fadeIn {
@@ -153,20 +154,17 @@ main h4 {
     }
 
     main {
-        flex-grow: 1;
-        align-self: stretch;
         width: 100vw;
         background-size: cover;
-        justify-content: flex-end;
-    }
-
-    .flex-item h1 {
-        padding-bottom: 0;
+        height: 50vh;
+        text-align: center;
+        position: relative;
+        padding: 0 0 5vh 0;
     }
 
     main a img {
-        margin: 0 0 4vh 0;
         text-align: center;
+        position: relative;
     }
 
     .footer-flex-item {
