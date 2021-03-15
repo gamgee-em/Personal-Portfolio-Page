@@ -17,7 +17,18 @@ I WANT a potential employer to navigate to clickable links intuitively
 WHEN A potential employer clicks on a link I want that link to take them to thier desired URL
 
 # Screenshot of GitHub Pages:
-![Screen Shot 2021-03-14 at 10 44 00 PM](https://user-images.githubusercontent.com/56444674/111100066-49955000-851d-11eb-8c14-bd6cf6189457.png)
+
+### Desktop View
+![portfolio-site-desktop](https://user-images.githubusercontent.com/56444674/111209353-485a3680-85a2-11eb-81ce-06c78d32984f.png)
+
+
+### Tablet View
+![portfolio-site-tablet](https://user-images.githubusercontent.com/56444674/111209342-45f7dc80-85a2-11eb-8ad2-4d8edd1082cb.png)
+
+
+### Mobile View
+![portfolio-site-mobile](https://user-images.githubusercontent.com/56444674/111209333-43958280-85a2-11eb-87b0-cf2b675fbfd3.png)
+
 
 # URL to Deployed Application
 <a href='https://samsweig.github.io/Personal-Portfolio-Page/#'>My Live GitHub Site!!! </a>
