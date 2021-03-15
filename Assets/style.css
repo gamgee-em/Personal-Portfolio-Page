@@ -7,35 +7,34 @@ body {
     background-color: black;
 }
 
+/* FLEX-CONTAINER */
+
 .flex-container {
     display: flex;
     height: 100vh;
 }
 
-/* fix fade in sidebar nav bug */
+/* NAVAGATION */
+
+/* Fix fade in sidebar nav bug */
 #fadeIn {
     background-color: #000;
     display: none;
     font-size: 2vw;
     text-align: center;
     width: 20vw;
-
 }
 
 nav .flex-item {
     background-color: lightgray;
+    width: 20vw;
 }
+
 
 nav ul li {
     padding: 5vh 0 5vh 0;
     font-family: 'Open Sans';
     letter-spacing: 0.5vw;
-}
-
-
-nav .flex-item ul li:hover {
-    cursor: pointer;
-    color: black;
 }
 
 .flex-item ul li a {
@@ -45,106 +44,113 @@ nav .flex-item ul li:hover {
     text-align: center;
  }
 
-li a:hover {
-    opacity: .3;
+li:hover {
+    background: rgba(67, 69, 67, 0.2);
+    cursor: pointer;
+    filter: blur(.75px);
 }
 
-
+/* MAIN */
 main {
     right: 0;
     display: flex;
     flex-flow: column nowrap;
     background: url(https://www.w3schools.com/howto/img_parallax.jpg) no-repeat center;
-/* use align self on children elements */
     font-family: 'Open Sans';
     font-weight: 900;
     font-size: 4vw;    
     width: 80vw;
-    justify-content: flex-end;
-    z-index: 1;
-    /*     backdrop-filter: blur(100px);
- */}
-
-h1 {
-    opacity: .9;
-    background-color: clear;
-    color:black;
-    letter-spacing: 1vw;
-    align-self: center;
-}
-
- button {
-    display: flex;
-    align-self: center;
-    font-family: 'Montserrat', sans-serif;
-    border-radius: 5px;
-    border: 1px white solid;
-    color: black;
-    outline: none;
-    font-weight: 900;
-    letter-spacing: .2vw;
-
-
+    justify-content: center;
  }
 
-button .btn {
-    background: transparent;
-    color: #fff;
-    border: 1px white solid;
-    opacity: 1;
+.flex-item h1 {
+    opacity: .9;
+    color:rgba(47, 47, 64, 0.765);
+    letter-spacing: 1vw;
+    align-self: center;
+    margin-bottom: -2vh;
+
 }
 
+/* HIRE ME BUTTON */
 
+ div .btn {
+    background: rgba(0, 0, 0, 0.594);
+    outline: none;
+    width: 12vw;
+    align-self: center;
+    outline: none;
+    font-weight: 900;
+    border: 1px lightgray solid;
+    color: lightgray;
+    margin: 2vh 10vh;
+    letter-spacing: .2vw;
+    border-radius: 5px;
+    font-family : inherit;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.text-center {
+    display: inline-block;
+    text-align: center;
+}
 
 button:hover {
-    outline: lightgray;
     cursor: pointer;
-    box-shadow: 0 0 20px white;
+    box-shadow: 0 0 10px white;
     color: white;
+    opacity: .7;
 }
 
 button:active {
-   background-color: gray;
-}
+    border: 1px solid grey;
+ }
 
-.flex-item .port-image {
-    border-radius: 5px;
+ /* PORTFOLIO IMAGE */
+
+.port-image {
+    align-self: center;
+    margin-bottom: -10vh;
+
 }
 
 .port-image img:hover {
     cursor: pointer;
-
+    opacity: .7;
 }
 
-img {
-    width: 45vw;
-    position: relative;
-    z-index: 1;
-}
-
-a {
-    border-radius: 10px;
-    width: 45vw;
-    align-self: center;
+main a img {
+    border-radius: 5px;
+    width: 35vw;
+    margin-bottom: -25vh;
 }
 
 main h4 {
-    font-family: 'Open Sans';
-
+   font-family: 'Open Sans';
     font-size: 2vw;
     align-self: center;
 }
 
-@media screen and (max-width: 550px) {
+ /* FOOTER */
+
+.footer-flex-item {
+    position: absolute;
+    bottom: 1vw;
+    opacity: .6;
+
+}
+
+@media screen and (max-width: 500px) {
 
     .flex-container {
         flex-flow: column wrap;
 
     }
 
-  #fadeIn {
-      width: 100vw;
-  }
+    #fadeIn {
+        width: 100vw;
+    }
 
     main {
         flex-grow: 1;
@@ -154,18 +160,18 @@ main h4 {
         justify-content: flex-end;
     }
 
-    .btn {
-        margin: 2vw 0;
+    .flex-item h1 {
+        padding-bottom: 0;
     }
 
-    a img {
-        margin: 1vw 0;
+    main a img {
+        margin: 0 0 4vh 0;
         text-align: center;
     }
 
     .footer-flex-item {
-        text-align: center;
-        padding: 1vw 0;
+        position: absolute;
+        bottom: 1vw;
     }
 
 } 
