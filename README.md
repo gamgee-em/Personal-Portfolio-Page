@@ -20,4 +20,4 @@ WHEN A potential employer clicks on a link I want that link to take them to thie
 ![Screen Shot 2021-03-14 at 10 44 00 PM](https://user-images.githubusercontent.com/56444674/111100066-49955000-851d-11eb-8c14-bd6cf6189457.png)
 
 # URL to Deployed Application
-<a href='https://samsweig.github.io/Personal-Portfolio-Page/#' style='text-shadow: 1px 1px 0px #000'>My Live GitHub Site!!! </a>
+<a href='https://samsweig.github.io/Personal-Portfolio-Page/#'>My Live GitHub Site!!! </a>
