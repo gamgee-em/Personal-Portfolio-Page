@@ -1,4 +1,4 @@
-# Sam Sweigart Portolio Page README
+# Sam Sweigart Portfolio Page README
 
 ## User Story
 
