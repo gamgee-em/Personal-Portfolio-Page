@@ -48,25 +48,11 @@ body {
   transform-origin: 100% 100%;
 }
 
-.container {
+#main-container {
   height: 100%;
   width: 100%;
-}
-
-#nav-container {
-  
-}
-
-#side-nav {
-  color: rgb(255, 255, 255);
-  list-style: none;
-  text-align: center;
-  justify-self: space-between;
-}
-
-ul {
-  padding: 0;
-}
+/*   background: url(https://www.w3schools.com/howto/img_parallax.jpg) no-repeat center;
+ */}
 
 .hide {
   display: none;
