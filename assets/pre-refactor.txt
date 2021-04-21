@@ -13,14 +13,38 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <!-- CSS STYLESHEET -->
     <link rel="stylesheet" href='./assets/styles/style.css'/>
-    <title>Sam Sweigart</title>
+    <link rel="stylesheet" href='./assets/styles/reset.css'>
+    <title>Weather Dashboard</title>
 </head>
 <body>   
         <!-- WRAPPER -->
-    <div id='welcome-container' class='d-flex flex-column justify-content-center align-items-center text-muted'>
-        <h1 id='greet-user'>Hello I'm Sam Sweigart</h1>
-        <h2 id='welcom-user'>Welcome to my Portfolio</h2>
-        <div id="welcome-heart" class="animate btn"></div>
+    <div class="flex-container">
+
+            <!-- SIDEBAR NAVAGATION -->
+        <nav class="flex-item" id='fadeIn'>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/sam-sweigart-879a13173/" target='_blank'>About</a></li>
+                <li><a href='mailto: samNotMyReal@Email.com'>Contact</a></li>
+                <li><a href='#portfolio'>Portfolio</a></li>
+                <li><a href='https://docs.google.com/document/d/12rGYeCKUMV7bEncuIcoQide6TCZzOhbUnni2WJBqilY/edit#heading=h.e3mjqiv852xf' target='_blank'>Resume</a></li>
+            </ul>
+        </nav>
+
+            <!-- MAIN -->
+        <main class='flex-item'>
+                <!-- INTRO -->                
+            <h1>Sam Sweigart</h1>
+            <div class='text-center'>            
+                <button class="btn">Hire Me</button>
+            </div>
+                <!-- PORTFOLIO IMAGE -->
+            <a class='port-image' href="https://samsweig.github.io/01hw-penn/" target='_blank' id='portfolio'>
+                <img src="assets/images/project1-ss.png" alt="Image of portfolio screenshot">
+            </a>
+        
+            <h4 class="footer-flex-item">&copy; Sam Sweigart</h4>
+        </main>
+
     </div>
         <!-- SCRIPTS MOMENT.JS / JQUERY / JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
