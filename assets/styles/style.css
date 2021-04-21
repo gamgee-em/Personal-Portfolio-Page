@@ -51,6 +51,8 @@ body {
 .container {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 #nav-container {
@@ -60,12 +62,16 @@ body {
 #side-nav {
   color: rgb(255, 255, 255);
   list-style: none;
-  text-align: center;
-  justify-self: space-between;
+  
 }
 
 ul {
   padding: 0;
+}
+
+#side-nav li:hover {
+  cursor: pointer;
+  color: rgb(185, 193, 203);
 }
 
 .hide {

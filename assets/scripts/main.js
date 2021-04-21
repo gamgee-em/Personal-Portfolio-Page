@@ -22,7 +22,6 @@ heart.on('click', function() {
         });
     }).empty();
 
-    // TODO STARTING POINT 4/21/21 AM 
     // adds background bg-img to MAIN container when...
     // heart is clicked
     // TODO switch for local img do not rely on external links if poss
@@ -30,7 +29,8 @@ heart.on('click', function() {
     sideNav.css({
         color: 'black',
         background: 'gray',
-        height: '100%',
-        width: '20vw'
+        height: '100vh',
+        width: '20vw',
+        padding: '5% 0 25% 0'
     })
 })
