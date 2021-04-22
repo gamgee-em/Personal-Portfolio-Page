@@ -59,7 +59,7 @@ body {
  }
 
  /* ALL CSS X to close nav links */
- .close-nav {
+ #close-nav {
   background: rgba(0, 0, 0, 0.218);
   width: 5%;
   height: 8%;
@@ -70,7 +70,7 @@ body {
   border-radius: 5px;
 }
 
-.close-nav:after {
+#close-nav:after {
   text-align: center;
   content: '';
   height: 80%;
@@ -80,7 +80,7 @@ body {
   left: 48%;
 }
 
-.close-nav:before {
+#close-nav:before {
   margin: 0 auto;
   content: '';
   height: 80%;
@@ -92,7 +92,7 @@ body {
   left: 48%;
 }
 
-.close-nav:hover {
+#close-nav:hover {
   cursor: pointer;
   box-shadow: 1px 1px 5px 5px rgba(255, 255, 255, 0.17);
 

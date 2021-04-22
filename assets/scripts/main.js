@@ -7,7 +7,7 @@ const welcomeUser = $('#welcome-user');
 const heart = $('#welcome-heart');
 const mainContain = $('#main-container');
 const navContain = $('.nav-container');
-const closeNav = $('.close-nav');
+const closeNav = $('#close-nav');
 const sideNav = $('#side-nav');
 const aboutNav = $('#about-nav');
 const resumeNav = $('#resume-nav');
@@ -18,15 +18,26 @@ const contactNav = $('#contact-nav');
 // fadeIn effect / look into a smoother way to start?
 welcomeContain.fadeOut().fadeIn(2000);
 closeNav.hide();
+// may not need this 
 $(document).ready(function() {
-    
-    
+
 });
+
+// try to use github api to retrieve repo links - not necessary but fun
+// love this function name - albeit not a good one 🤣 
+const getGitData = async () => {
+    const gitApiRequest = `https://api.github.com/users/gamgee-em/repos`;
+    // combine awa
+    const gitData = await (await fetch(gitApiRequest)).json();
+    console.log(gitData)
+    return gitData;
+  }
+  getGitData();
 
 // heart icon on CLICK fades out welcome page... 
 // & adds hide class to then display main page bg-img
-heart.on('click', function() {
-    welcomeContain.fadeOut(3000, function() {
+heart.on('click', ()=> {
+    welcomeContain.fadeOut(3000, ()=> {
         // TODO try using the jquery method .hide('speed value') instead 
         welcomeContain.attr({
             style: 'background-color: white',
@@ -51,15 +62,17 @@ heart.on('click', function() {
 
 let slideNavRender = () => {
     sideNav.css('width', '100vw');
+    // hide ul li elements
     closeNav.show();
     sideNav.children().hide()
     // return to main page when clicked
     closeNav.on('click', () => {
         closeNav.hide();
+        // show ul li elements
         sideNav.children().show()
         sideNav.css('width', '20vw')
     })
-}
+};
 
 aboutNav.on('click',() => {
     slideNavRender();
