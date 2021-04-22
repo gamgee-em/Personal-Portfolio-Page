@@ -13,19 +13,19 @@ const aboutNav = $('#about-nav');
 const resumeNav = $('#resume-nav');
 const portfolioNav = $('#portfolio-nav');
 const contactNav = $('#contact-nav');
-const portCards = $('portfolio-cards');
+const portCardsContainer = $('#portfolio-cards-container');
+const icons = $('#icons');
 // on LOAD page 'fades out' instantly to create...
 // fadeIn effect / look into a smoother way to start?
-welcomeContain.fadeOut().fadeIn(2000);
+// TODO: for loop over welcome string and fade in each index (letter)
+welcomeContain.fadeOut().fadeIn(1000);
 closeNav.hide();
-portCards.hide();
+portCardsContainer.hide();
+icons.hide();
 
-// may not need this 
-$(document).ready(function() {
+    /* API CALLS */
 
-});
-
-// try to use github api to retrieve repo links - not necessary but fun
+// TODO: try to use github api to retrieve repo links - not necessary but fun
 // love this function name - albeit not a good one 🤣 
 const getGitData = async () => {
     const gitApiRequest = `https://api.github.com/users/gamgee-em/repos`;
@@ -37,11 +37,12 @@ const getGitData = async () => {
   }
   getGitData();
 
-// heart icon on CLICK fades out welcome page... 
+  /* RENDER HTML FUNCTIONS */
+
 // & adds hide class to then display main page bg-img
-heart.on('click', ()=> {
-    welcomeContain.fadeOut(3000, ()=> {
-        // TODO try using the jquery method .hide('speed value') instead 
+const mainRender = ()=> {
+    welcomeContain.fadeOut(1000, ()=> {
+        // TODO: try using the jquery method .hide('speed value') instead 
         welcomeContain.attr({
             style: 'background-color: white',
             class: 'hide'
@@ -50,7 +51,7 @@ heart.on('click', ()=> {
 
     // adds background bg-img to MAIN container when...
     // heart is clicked
-    // TODO switch for local img do not rely on external links if poss
+    // TODO: switch for local img do not rely on external links if poss
     mainContain.css('background', 'url(https://www.w3schools.com/howto/img_parallax.jpg) 100% no-repeat');
     sideNav.css({
         color: 'black',
@@ -58,40 +59,53 @@ heart.on('click', ()=> {
         height: '100vh',
         width: '20vw',
         padding: '5% 0 25% 0'
-    }).addClass('show');
-})
+    }).show(1000);
+    
+    icons.fadeIn(1000);
 
-// nav links click events cover page and display content
+}
 
-let slideNavRender = () => {
+// nav link tags click event covers page and display content
+const slideNavRender = () => {
     sideNav.css('width', '100vw');
     // hide ul li elements
     closeNav.show();
     sideNav.children().hide()
-    // return to main page when clicked
-    closeNav.on('click', () => {
-        closeNav.hide();
-        // show ul li elements
-        sideNav.children().show()
-        sideNav.css('width', '20vw')
-    })
+    icons.hide('slow')
 };
+
+    /* CLICK EVENTS */
+
+// heart icon on CLICK fades out welcome page... 
+heart.on('click', ()=> {
+    mainRender();
+})
+
 
 aboutNav.on('click',() => {
     slideNavRender();
-    $('#app-card0').attr('src','./assets/images/project-1-ss.png');
 
 });
 
-// add screenshot of resume & clickable/downloadable pdf
+// TODO: add screenshot of resume & clickable/downloadable pdf
 resumeNav.on('click',() => {
     slideNavRender();
 
 });
 
 portfolioNav.on('click',() => {
+    portCardsContainer.show(2000);
     slideNavRender();
 });
 
-// TODO add form contact in page instead of email pop out. 
+// TODO: add form contact in page instead of email pop out. 
 contactNav.on()
+
+// return to main page when clicked
+closeNav.on('click', () => {
+    closeNav.hide(1000);
+    portCardsContainer.hide(1000);
+    // show ul li elements
+    sideNav.children().show(1000)
+    sideNav.css('width', '20vw')
+})

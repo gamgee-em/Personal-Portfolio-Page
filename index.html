@@ -30,22 +30,41 @@
         <!-- MAIN CONTAINER -->
     <div id='main-container' class="custom-container">
         <div class="col nav-container">
-        <div id='close-nav'>
-            <!-- styling for nav slide back X icon -->
-        </div>
+            <div id='close-nav'>
+                <!-- styling for nav slide back X icon -->
+            </div>
             <ul id='side-nav' class='d-flex flex-column justify-content-around align-items-center'>
                 <li id='about-nav'>About</li>
                 <li id='resume-nav'>Resume</li>
                 <li id='portfolio-nav'>Portfolio</li>
-                <li id='contact-nav'><a href='mailto: samuel.sweigart@gmail.com'>Contact Me</a></li>
+                <li id='contact-nav'>
+                    <a href='mailto: samuel.sweigart@gmail.com'>Contact Me</a>
+                </li>
             </ul>
-        </div>
-        <div id='d-flex portfolio-cards'>
-            <a href=""><img id="app-card0"></a>
-            <img id="app-card0">
-            <img id="app-card0">
-           
-           
+            <div id='icons' class="row">
+                <span class='col-11'>
+                    <a href=""><img src="./assets/images/icons/github-icon.png" class="col-2"></a>
+                    <a href=""><img src="./assets/images/icons/linkedin-icon.png" class="col-2"></a>
+                    <a href=""><img src="./assets/images/icons/twitter-icon.png" class="col-2"></a>
+                </span><br>
+                <span class="col-11 pt-2">
+                    <a href=""><img src="./assets/images/icons/js-icon.png" class="col-2"></a>
+                    <a href=""><img src="./assets/images/icons/css-filetype.png" class="col-2"></a>
+                    <a href=""><img src="./assets/images/icons/html-icon.png" class="col-2"></a>
+                </span>
+            </div>
+                <!-- TODO eventually take screenshot of html title syntax and display/flip on hover -->
+            <div id='portfolio-cards-container' class="row">
+                <a href="https://gamgee-em.github.io/Project-API/" class="col-3" target='_blank'>
+                    <img id="app-card0" class="img-thumbnail" src="./assets/images/project-1-ss.png">
+                </a>
+                <a href="https://gamgee-em.github.io/Daily-Planner/" class="col-3" target='_blank'>
+                    <img id="app-card1"  class="img-thumbnail" src="./assets/images/day-planner-ss.png">
+                </a>
+                <a href="https://gamgee-em.github.io/JS-Quiz-Game/" class="col-3" target='_blank'>
+                    <img id="app-card2"  class="img-thumbnail" src="./assets/images/js-quiz-ss.png">
+                </a>    
+            </div>
         </div>
     </div>
         <!-- SCRIPTS MOMENT.JS / JQUERY / JQUERY UI / JS -->
