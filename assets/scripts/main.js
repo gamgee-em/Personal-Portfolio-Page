@@ -13,11 +13,13 @@ const aboutNav = $('#about-nav');
 const resumeNav = $('#resume-nav');
 const portfolioNav = $('#portfolio-nav');
 const contactNav = $('#contact-nav');
-
+const portCards = $('portfolio-cards');
 // on LOAD page 'fades out' instantly to create...
 // fadeIn effect / look into a smoother way to start?
 welcomeContain.fadeOut().fadeIn(2000);
 closeNav.hide();
+portCards.hide();
+
 // may not need this 
 $(document).ready(function() {
 
@@ -29,7 +31,8 @@ const getGitData = async () => {
     const gitApiRequest = `https://api.github.com/users/gamgee-em/repos`;
     // combine awa
     const gitData = await (await fetch(gitApiRequest)).json();
-    console.log(gitData)
+    const projectObj = gitData[9];
+    console.log(projectObj)
     return gitData;
   }
   getGitData();
@@ -76,6 +79,7 @@ let slideNavRender = () => {
 
 aboutNav.on('click',() => {
     slideNavRender();
+    $('#app-card0').attr('src','./assets/images/project-1-ss.png');
 
 });
 
