@@ -5,6 +5,11 @@ const welcomeUser = $('#welcome-user');
 const heart = $('#welcome-heart');
 const mainContain = $('#main-container');
 const sideNav = $('#side-nav');
+const aboutNav = $('#about-nav');
+const resumeNav = $('#resume-nav');
+const portfolioNav = $('#portfolio-nav');
+const contactNav = $('#contact-nav');
+
 // on LOAD page 'fades out' instantly to create...
 // fadeIn effect / look into a smoother way to start?
 $(document).ready(function() {
@@ -25,7 +30,7 @@ heart.on('click', function() {
     // adds background bg-img to MAIN container when...
     // heart is clicked
     // TODO switch for local img do not rely on external links if poss
-    mainContain.css('background', 'url(https://www.w3schools.com/howto/img_parallax.jpg) no-repeat center');
+    mainContain.css('background', 'url(https://www.w3schools.com/howto/img_parallax.jpg) 100% no-repeat');
     sideNav.css({
         color: 'black',
         background: 'gray',
