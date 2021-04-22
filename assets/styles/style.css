@@ -54,27 +54,79 @@ body {
   padding: 0;
 }
 
-#side-nav {
-  color: rgb(255, 255, 255);
-  list-style: none;
-  
+#side-nav .show {
+  padding: 0;
+ }
+
+ /* ALL CSS X to close nav links */
+ .close-nav {
+  background: rgba(0, 0, 0, 0.218);
+  width: 5%;
+  height: 8%;
+  position: absolute;
+  padding: 5px;
+  top: 2%;
+  right: 1.5%;
+  border-radius: 5px;
 }
 
-ul li {
+.close-nav:after {
+  text-align: center;
+  content: '';
+  height: 80%;
+  border-left: 5px double rgba(255, 255, 255, 0.17);
+  position: absolute;
+  transform: rotate(45deg);
+  left: 48%;
+}
+
+.close-nav:before {
+  margin: 0 auto;
+  content: '';
+  height: 80%;
+  border-left: 5px double rgba(226, 136, 67, 0.293);
+
+/*   border-left: 5px double rgba(36, 79, 131, 0.718);
+ */  position: absolute;
+  transform: rotate(-45deg);
+  left: 48%;
+}
+
+.close-nav:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 5px 5px rgba(255, 255, 255, 0.17);
+
+}
+
+li {
   display: flex;
+  list-style: none;
   letter-spacing: 0.5em;
-  padding: 0;
   width: 20vw;
   height: 15vh;
   justify-content: center;
   align-items: center;
- }
+  color: rgb(255, 255, 255);
+}
 
 #side-nav li:hover {
   cursor: pointer;
   color: rgb(185, 193, 203);
+  background: rgba(255, 255, 255, 0.17);
+}
+
+.slide-right {
+  display: none;
+  border : 1px solid #000;
+  width: 100%;
+}
+
+a,a:hover {
+  text-decoration: none;
+  color: inherit;
 }
 
 .hide {
   display: none;
 }
+
