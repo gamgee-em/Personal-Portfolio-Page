@@ -15,13 +15,20 @@ const portfolioNav = $('#portfolio-nav');
 const contactNav = $('#contact-nav');
 const portCardsContainer = $('#portfolio-cards-container');
 const icons = $('#icons');
+const socialIcons = $('#social-icons');
+const fileIcons = $('#file-icons');
+const aboutContain = $('#about-container')
+const resumeIcon = $('#resume-icon');
 // on LOAD page 'fades out' instantly to create...
 // fadeIn effect / look into a smoother way to start?
 // TODO: for loop over welcome string and fade in each index (letter)
-welcomeContain.fadeOut().fadeIn(1000);
+welcomeContain.fadeOut(500);
+welcomeContain.fadeIn(1000);
 closeNav.hide();
 portCardsContainer.hide();
 icons.hide();
+resumeIcon.hide();
+aboutContain.hide();
 
     /* API CALLS */
 
@@ -55,7 +62,7 @@ const mainRender = ()=> {
     mainContain.css('background', 'url(https://www.w3schools.com/howto/img_parallax.jpg) 100% no-repeat');
     sideNav.css({
         color: 'black',
-        background: 'gray',
+        background: 'linear-gradient(135deg,rgb(176, 187, 199) 40%,rgb(128, 128, 128) 40%)',
         height: '100vh',
         width: '20vw',
         padding: '5% 0 25% 0'
@@ -68,45 +75,61 @@ const mainRender = ()=> {
 // nav link tags click event covers page and display content
 const slideNavRender = () => {
     sideNav.css('width', '100vw');
-    // hide ul li elements
-    closeNav.show();
+    icons.css('width', '99vw');
+
+    // hide elements
     sideNav.children().hide()
-    icons.hide('slow')
+    socialIcons.hide(1000)
+    // show elements
+    fileIcons.show(1000);
+    closeNav.show(1000);
 };
 
     /* CLICK EVENTS */
 
 // heart icon on CLICK fades out welcome page... 
 heart.on('click', ()=> {
+    fileIcons.hide();
     mainRender();
 })
 
-
+    /*  ABOUT */
 aboutNav.on('click',() => {
+    aboutContain.fadeIn(1000);
     slideNavRender();
-
 });
 
+    /* RESUME */
 // TODO: add screenshot of resume & clickable/downloadable pdf
 resumeNav.on('click',() => {
+    resumeIcon.show(1000);
     slideNavRender();
 
 });
 
+    /* PORTFOLIO */
 portfolioNav.on('click',() => {
-    portCardsContainer.show(2000);
+    portCardsContainer.fadeIn(1000);
     slideNavRender();
 });
 
+    /* CONTACT */
 // TODO: add form contact in page instead of email pop out. 
 contactNav.on()
 
+    /* CLOSE SLIDERS */
 // return to main page when clicked
 closeNav.on('click', () => {
     closeNav.hide(1000);
-    portCardsContainer.hide(1000);
-    icons.show(2000)
+    portCardsContainer.fadeOut(500);
+    icons.show(1000)
+    resumeIcon.hide(1000)
+    socialIcons.show(1000)
+    fileIcons.hide(1000)
+    aboutContain.fadeOut(500);
     // show ul li elements
     sideNav.children().show(1000)
     sideNav.css('width', '20vw')
+    icons.css('width', '25vw');
+
 })

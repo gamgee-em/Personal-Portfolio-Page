@@ -16,6 +16,7 @@ h1,h2,li {
   width: 100%;
   background-color: rgb(25, 26, 29);
 }
+
 #welcome-container h1,h2 {
   font-weight: 900;
   letter-spacing: 3;
@@ -55,8 +56,7 @@ h1,h2,li {
 }
 
 .custom-container {
-  margin: 0;
-  padding: 0;
+  width: 100vw;
 }
 
  /* ALL CSS X to close nav links */
@@ -120,6 +120,58 @@ a,a:hover {
   color: inherit;
 }
 
+  /* ABOUT */
+
+#about-container {
+  display: flex;
+  position: absolute;
+  top: 20vh;
+  text-align: center;
+  justify-content: center;
+  margin: 0 0 0 8vw;
+}
+
+#about-container img {
+  position: relative;
+  width: 40%;
+  height: 25%;
+  margin: 0 0 0 0;
+  top: 9vh;
+  border-radius: 5px;
+}
+
+#about-container div {
+  width: 60%;
+  padding: 0 0 5% 2%;
+}
+
+#about-container h2 {
+  color:rgb(0, 0, 0);
+  position: relative;
+  letter-spacing: 1vw;
+}
+
+#about-container p {
+  position: relative;
+  text-align: left;
+  font-size: 90%;
+  font-weight: 600;
+  letter-spacing: 1;
+}
+
+  /* RESUME */
+#resume-icon {
+  display: flex;
+  position: absolute;
+  top: 28vh;
+  width: 100vw;
+}
+
+#resume-icon a img {
+  margin-left: 37.5vw;
+  width: 15vw;
+}
+  /* PORTFOLIO */
 #portfolio-cards-container {
   height: 90vh;
   width: 100vw;
