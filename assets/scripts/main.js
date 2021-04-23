@@ -26,7 +26,7 @@ icons.hide();
     /* API CALLS */
 
 // TODO: try to use github api to retrieve repo links - not necessary but fun
-// love this function name - albeit not a good one 🤣 
+// love this function name - albeit not a good one 🤣
 const getGitData = async () => {
     const gitApiRequest = `https://api.github.com/users/gamgee-em/repos`;
     // combine awa
@@ -105,6 +105,7 @@ contactNav.on()
 closeNav.on('click', () => {
     closeNav.hide(1000);
     portCardsContainer.hide(1000);
+    icons.show(2000)
     // show ul li elements
     sideNav.children().show(1000)
     sideNav.css('width', '20vw')
