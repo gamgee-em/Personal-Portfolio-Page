@@ -14,12 +14,12 @@ h1,h2,li {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgb(25, 26, 29);
+  background-color: rgba(25, 26, 29, 0.82);
 }
 
 #welcome-container h1,h2 {
   font-weight: 900;
-  letter-spacing: 3;
+  letter-spacing: .5vw;
 
 }
 
@@ -55,15 +55,11 @@ h1,h2,li {
   transform-origin: 100% 100%;
 }
 
-.custom-container {
-  width: 100vw;
-}
-
  /* ALL CSS X to close nav links */
  #close-nav {
   background: rgba(0, 0, 0, 0.218);
-  width: 5%;
-  height: 8%;
+  width: 5vw;
+  height: 9vh;
   position: absolute;
   padding: 5px;
   top: 2%;
@@ -73,23 +69,21 @@ h1,h2,li {
 }
 
 #close-nav:after {
-  text-align: center;
   content: '';
   height: 80%;
   border-left: 5px double rgba(255, 255, 255, 0.17);
   position: absolute;
   transform: rotate(45deg);
-  left: 48%;
+  left: 50%;
 }
 
 #close-nav:before {
-  margin: 0 auto;
   content: '';
   height: 80%;
   border-left: 5px double rgba(226, 136, 67, 0.293);
   position: absolute;
   transform: rotate(-45deg);
-  left: 48%;
+  left: 50%;
 }
 
 #close-nav:hover {
@@ -128,7 +122,7 @@ a,a:hover {
   top: 20vh;
   text-align: center;
   justify-content: center;
-  margin: 0 0 0 8vw;
+  margin: 0 0 0 5vw;
 }
 
 #about-container img {
@@ -142,7 +136,7 @@ a,a:hover {
 
 #about-container div {
   width: 60%;
-  padding: 0 0 5% 2%;
+  padding: 0 0 5vh 2vw;
 }
 
 #about-container h2 {
@@ -182,7 +176,7 @@ a,a:hover {
  }
 
 #portfolio-cards-container img:hover {
-  border: 2px outset rgb(84, 86, 90);
+  box-shadow: 1px 1px 1px 1px black;
 }
 
 a {
@@ -211,3 +205,8 @@ a {
   display: none;
 }
 
+@media screen and (max-width: 500px){
+    #side-nav {
+      width: 100%;
+    }
+}
