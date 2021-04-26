@@ -17,8 +17,7 @@ const mainRender = ()=> {
         welcomeContain.attr('class', 'hide');
     }).empty();
 
-    // adds background bg-img to MAIN container when...
-    // heart is clicked
+    // adds background bg-img to MAIN container when heart icon is clicked
     // TODO: switch for local img do not rely on external links if poss
     mainContain.css({
         'background': 'url(https://www.w3schools.com/howto/img_parallax.jpg)',
