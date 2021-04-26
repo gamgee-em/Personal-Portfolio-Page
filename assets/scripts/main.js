@@ -11,7 +11,6 @@ heart.effect('pulsate',{times: 25}, 30000);
 
   /* RENDER HTML FUNCTIONS */
 
-// & adds hide class to then display main page bg-img
 const mainRender = ()=> {
     welcomeContain.fadeOut(1000, ()=> {
         // TODO: try using the jquery method .hide('speed value') instead 
@@ -44,7 +43,6 @@ const mainRender = ()=> {
 const slideNavRender = () => {
     sideNav.css('width', '100vw');
     icons.css('width', '99vw');
-
     // hide elements
     sideNav.children().hide()
     socialIcons.hide(1000)
@@ -66,6 +64,5 @@ const closeNavRender = () => {
     sideNav.css('width', '20vw')
     icons.css('width', '25vw');
 }
-
 
 getGitData();
