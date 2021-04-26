@@ -28,6 +28,8 @@ portCardsContainer.hide();
 icons.hide();
 resumeIcon.hide();
 aboutContain.hide();
+heart.effect('pulsate',{times: 10}, 20000);
+
 
     /* API CALLS */
 

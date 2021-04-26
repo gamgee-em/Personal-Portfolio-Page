@@ -19,16 +19,14 @@ WHEN A potential employer clicks on a link I want that link to take them to thie
 # Screenshot of GitHub Pages:
 
 ### Desktop View
-![portfolio-site-desktop](https://user-images.githubusercontent.com/56444674/111209353-485a3680-85a2-11eb-81ce-06c78d32984f.png)
-
+![desktop-view-ss](https://user-images.githubusercontent.com/56444674/116013892-86fefa00-a600-11eb-9cb1-09566fdd27f4.png)
 
 ### Tablet View
-![portfolio-site-tablet](https://user-images.githubusercontent.com/56444674/111209342-45f7dc80-85a2-11eb-8ad2-4d8edd1082cb.png)
-
+![tablet-view-ss](https://user-images.githubusercontent.com/56444674/116013889-836b7300-a600-11eb-9ad7-4cf01685acc6.png)
 
 ### Mobile View
-![portfolio-site-mobile](https://user-images.githubusercontent.com/56444674/111209333-43958280-85a2-11eb-87b0-cf2b675fbfd3.png)
+![mobile-view-ss](https://user-images.githubusercontent.com/56444674/116013890-86666380-a600-11eb-9d24-36c1432212ad.png)
 
 
 # URL to Deployed Application
-<a href='https://samsweig.github.io/Personal-Portfolio-Page/#'>My Live GitHub Site!!! </a>
+<a href='https://gamgee-em.github.io/Personal-Portfolio-Page/#'>My Live GitHub Site!!! </a>
