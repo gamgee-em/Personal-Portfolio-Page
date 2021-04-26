@@ -26,12 +26,11 @@
 <body>   
         <!-- WELCOME CONTAINER -->
     <div id='welcome-container' class='d-flex flex-column justify-content-center align-items-center'>
-        <h1 id='greet-user'>Hello I'm Sam Sweigart</h1>
+        <h1 id='greet-user'></h1>
         <div id="welcome-heart" class="animate btn">
             <!-- 💙 icon renders from heart click event -->
         </div>
-        <h2 id='welcom-user'>Welcome to my Portfolio</h2>
-
+        <h2 id='welcome-user'></h2>
     </div>
         <!-- MAIN CONTAINER -->
     <div id='main-container' class="jumbotron jumbotron-fluid">
@@ -39,13 +38,12 @@
             <div id='close-nav'>
                 <!-- renders content from closeNav click event -->
             </div>
+                <!-- SIDE NAV -->
             <ul id='side-nav' class='d-flex flex-column justify-content-around align-items-center'>
-                <li id='about-nav'>About</li>
-                <li id='resume-nav'>Resume</li>
-                <li id='portfolio-nav'>Portfolio</li>
-                <li id='contact-nav'>
-                    <a href='mailto: samuel.sweigart@gmail.com'>Contact Me</a>
-                </li>
+                <li id='about-nav'></li>
+                <li id='resume-nav'></li>
+                <li id='portfolio-nav'></li>
+                <li id='contact-nav'></li>
             </ul>
                 <!-- ICONS -->
             <div id='icons' class="row">
@@ -64,7 +62,7 @@
             <div id='about-container' class="container">
                 <img src="./assets/images/sam-nrg-thunderstruck.JPG" alt="Sam Sweigart on a rock climbing route named 'Thunder Struck' in the New River Gorge, WV" class="col-5">
                 <div class='col-5'><br>
-                    <h2 class="col">About Me</h2>
+                    <h2 id='about-header' class="col"></h2>
                     <p id='about-1' class="col">
                         <!-- renders content from aboutNav click event -->
                     </p>

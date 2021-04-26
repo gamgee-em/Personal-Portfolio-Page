@@ -8,7 +8,6 @@ const getGitData = async () => {
     var projectObj = gitData[9];
     var gitAvatar = projectObj.owner.avatar_url;
     var projectApiUrl = projectObj.url;
-    //const gitAvatar = projectObj.owner.avatar_url;
     console.log(projectObj.owner)
     console.log(projectObj)
     return gitData;

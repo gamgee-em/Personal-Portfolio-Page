@@ -11,6 +11,15 @@ heart.effect('pulsate',{times: 25}, 30000);
 
   /* RENDER HTML FUNCTIONS */
 
+$(document).ready(() => {
+    greetUser.html('Hello I\'m Sam Sweigart');
+    welcomeUser.html('Welcome to my Portfolio');
+    aboutNav.html('About');
+    resumeNav.html('Resume');
+    portfolioNav.html('Portfolio');
+    contactNav.first().append($('<a>').attr('href', 'mailto: samuel.sweigart@gmail.com').html('Contact Me'));
+})
+
 const mainRender = ()=> {
     welcomeContain.fadeOut(1000, ()=> {
         // TODO: try using the jquery method .hide('speed value') instead 

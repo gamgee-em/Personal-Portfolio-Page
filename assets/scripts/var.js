@@ -1,6 +1,5 @@
-console.log('Welcome to my portfolio page. Stop back soon for an update!');
-// try moving global variables to seperate variable file...
-// then require/export?
+console.log('Welcome to my portfolio page. Stop back soon for updates!');
+
 const welcomeContain = $('#welcome-container');
 const greetUser = $('#greet-user');
 const welcomeUser = $('#welcome-user');
@@ -10,6 +9,7 @@ const navContain = $('.nav-container');
 const closeNav = $('#close-nav');
 const sideNav = $('#side-nav');
 const aboutNav = $('#about-nav');
+const aboutHeader = $('#about-header');
 const aboutP1 = $('#about-1');
 const aboutP2 = $('#about-2');
 const resumeNav = $('#resume-nav');
