@@ -1,24 +1,3 @@
-console.log('Welcome to my portfolio page. Stop back soon for an update!');
-// try moving global variables to seperate variable file...
-// then require/export?
-const welcomeContain = $('#welcome-container');
-const greetUser = $('#greet-user');
-const welcomeUser = $('#welcome-user');
-const heart = $('#welcome-heart');
-const mainContain = $('#main-container');
-const navContain = $('.nav-container');
-const closeNav = $('#close-nav');
-const sideNav = $('#side-nav');
-const aboutNav = $('#about-nav');
-const resumeNav = $('#resume-nav');
-const portfolioNav = $('#portfolio-nav');
-const contactNav = $('#contact-nav');
-const portCardsContainer = $('#portfolio-cards-container');
-const icons = $('#icons');
-const socialIcons = $('#social-icons');
-const fileIcons = $('#file-icons');
-const aboutContain = $('#about-container')
-const resumeIcon = $('#resume-icon');
 // on LOAD page 'fades out' instantly to create...
 // fadeIn effect / look into a smoother way to start?
 welcomeContain.fadeOut(500);
@@ -28,22 +7,7 @@ portCardsContainer.hide();
 icons.hide();
 resumeIcon.hide();
 aboutContain.hide();
-heart.effect('pulsate',{times: 10}, 20000);
-
-
-    /* API CALLS */
-
-// TODO: try to use github api to retrieve repo links - not necessary but fun
-// love this function name - albeit not a good one 🤣
-const getGitData = async () => {
-    const gitApiRequest = `https://api.github.com/users/gamgee-em/repos`;
-    // combine awa
-    const gitData = await (await fetch(gitApiRequest)).json();
-    const projectObj = gitData[9];
-    console.log(projectObj)
-    return gitData;
-  }
-  getGitData();
+heart.effect('pulsate',{times: 25}, 30000);
 
   /* RENDER HTML FUNCTIONS */
 
@@ -74,7 +38,6 @@ const mainRender = ()=> {
     }).show(1000);
     
     icons.fadeIn(1000);
-
 }
 
 // nav link tags click event covers page and display content
@@ -104,38 +67,5 @@ const closeNavRender = () => {
     icons.css('width', '25vw');
 }
 
-    /* CLICK EVENTS */
 
-// heart icon on CLICK fades out welcome page... 
-heart.on('click', ()=> {
-    fileIcons.hide();
-    mainRender();
-})
-
-    /*  ABOUT */
-aboutNav.on('click',() => {
-    aboutContain.fadeIn(1000);
-    slideNavRender();
-});
-
-    /* RESUME */
-resumeNav.on('click',() => {
-    resumeIcon.show(1000);
-    slideNavRender();
-});
-
-    /* PORTFOLIO */
-portfolioNav.on('click',() => {
-    portCardsContainer.fadeIn(1000);
-    slideNavRender();
-});
-
-    /* CONTACT */
-// TODO: add form contact in page instead of email pop out. 
-contactNav.on()
-
-    /* CLOSE SLIDERS */
-// return to main page when clicked
-closeNav.on('click', () => {
-    closeNavRender();
-})
+getGitData();
