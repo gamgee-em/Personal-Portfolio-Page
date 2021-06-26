@@ -29,11 +29,11 @@ const mainRender = ()=> {
     // adds background bg-img to MAIN container when heart icon is clicked
     // TODO: switch for local img do not rely on external links if poss
     mainContain.css({
-        'background': 'url(https://www.w3schools.com/howto/img_parallax.jpg)',
+        background: 'url(https://www.w3schools.com/howto/img_parallax.jpg)',
         'background-repeat': 'no-repeat',
         'background-size': 'cover',
         'background-position': 'center',
-        'font-size': '1.5vw'
+        'font-size': '1.5vw',
     });
 
     sideNav.css({
@@ -45,7 +45,7 @@ const mainRender = ()=> {
     }).show(1000);
     
     icons.fadeIn(1000);
-}
+};
 
 // nav link tags click event covers page and display content
 const slideNavRender = () => {
@@ -67,8 +67,8 @@ const slideNavRender = () => {
     aboutP2.html('In my journey for a new path, I began exploring html and css. Living life as someone who has a near insatiable curiousity for information and problem solving, I quickly knew that Web Development is something I wanted to explore and with time, become proficient in. Thank you for stopping by my page and taking the time to get to know me a bit better. This space will continue to be a work in progress as I polish my current skills and expand my scope into other aspects of Web Development. Please check in regularly and I would love to hear any feedback you may have to offer.');
     
     appCard0.attr('src', './assets/images/project-1-ss.png');
-    appCard1.attr('src', './assets/images/day-planner-ss.png');
-    appCard2.attr('src', './assets/images/js-quiz-ss.png');
+    appCard1.attr('src', './assets/images/team-profile-generator.png');
+    appCard2.attr('src', './assets/images/tech-blog.png');
 };
 
 const closeNavRender = () => {
